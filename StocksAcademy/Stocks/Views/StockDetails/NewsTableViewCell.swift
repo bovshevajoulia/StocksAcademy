@@ -7,6 +7,7 @@
 
 import UIKit
 
+
 class NewsTableViewCell: UITableViewCell {
     static let identifier = "NewsTableViewCell"
     static let prefferedHeight: CGFloat = 200

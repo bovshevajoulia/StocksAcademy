@@ -20,6 +20,7 @@
 		A00B47CE28968B6D005AD813 /* StockCandlesViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B47CD28968B6D005AD813 /* StockCandlesViewModelTests.swift */; };
 		A00B47D02896C2A8005AD813 /* ModulesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00B47CF2896C2A8005AD813 /* ModulesListView.swift */; };
 		A00B47D8289B8DB7005AD813 /* Charts-master in Resources */ = {isa = PBXBuildFile; fileRef = A00B47D5289B8DB7005AD813 /* Charts-master */; };
+		A00B47DC28A12160005AD813 /* Портфолио проект.pdf in Resources */ = {isa = PBXBuildFile; fileRef = A00B47DB28A12160005AD813 /* Портфолио проект.pdf */; };
 		A01884AB288D90A10072090C /* ModuleListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01884AA288D90A10072090C /* ModuleListItemView.swift */; };
 		A01884AE288EB55B0072090C /* GalaxyBackground.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01884AD288EB55A0072090C /* GalaxyBackground.swift */; };
 		A01884BA288EE7E30072090C /* StocksViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A01884B9288EE7E30072090C /* StocksViewModel.swift */; };
@@ -197,6 +198,7 @@
 		A00B47CD28968B6D005AD813 /* StockCandlesViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockCandlesViewModelTests.swift; sourceTree = "<group>"; };
 		A00B47CF2896C2A8005AD813 /* ModulesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModulesListView.swift; sourceTree = "<group>"; };
 		A00B47D5289B8DB7005AD813 /* Charts-master */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = "Charts-master"; sourceTree = "<group>"; };
+		A00B47DB28A12160005AD813 /* Портфолио проект.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "Портфолио проект.pdf"; sourceTree = "<group>"; };
 		A01884AA288D90A10072090C /* ModuleListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleListItemView.swift; sourceTree = "<group>"; };
 		A01884AD288EB55A0072090C /* GalaxyBackground.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalaxyBackground.swift; sourceTree = "<group>"; };
 		A01884B9288EE7E30072090C /* StocksViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StocksViewModel.swift; sourceTree = "<group>"; };
@@ -595,6 +597,7 @@
 		A0A79A5B28814FB4000922BF = {
 			isa = PBXGroup;
 			children = (
+				A00B47DB28A12160005AD813 /* Портфолио проект.pdf */,
 				A00B47D5289B8DB7005AD813 /* Charts-master */,
 				A0A79A6628814FB4000922BF /* StocksAcademy */,
 				A0A79A7D28814FB7000922BF /* StocksAcademyTests */,
@@ -997,6 +1000,7 @@
 			files = (
 				A0A79A7128814FB7000922BF /* Assets.xcassets in Resources */,
 				A00B47D8289B8DB7005AD813 /* Charts-master in Resources */,
+				A00B47DC28A12160005AD813 /* Портфолио проект.pdf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
