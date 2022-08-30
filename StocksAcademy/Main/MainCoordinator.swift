@@ -14,9 +14,11 @@ final class MainCoordinator: Coordinator {
     // MARK: - Private
     private let goToStock: CurrentValueSubject<Bool,Never>
     
-    private let homeViewModel = AcademyViewModel(manager: StocksAcademyManager())
-    private let stocksViewModel = StocksViewModel(manager: StocksManager())
-    private let stocksNewsViewModel = MarketNewsViewModel(manager: StocksManager())
+    private let stockManager = StocksManager()
+    
+    private lazy var homeViewModel = AcademyViewModel(manager: StocksAcademyManager())
+    private lazy var stocksViewModel = StocksViewModel(manager: stockManager)
+    private lazy var stocksNewsViewModel = MarketNewsViewModel(manager: stockManager)
     
     private let stateManager = StateManager()
     
