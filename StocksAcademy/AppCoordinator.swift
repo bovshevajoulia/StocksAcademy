@@ -23,6 +23,9 @@ final class AppCoordinator: Coordinator {
     
     private var subscriptions = Set<AnyCancellable>()
     
+    private let stocksManager = StocksManager(network: NetworkService(),
+                                             persistent: PersistentManager())
+    
     private enum FlowName: String {
         case onboarding
         case login
@@ -168,7 +171,8 @@ final class AppCoordinator: Coordinator {
     
     /// Start Main flow (SwiftUI)
     private func startMainFlow() {
-        let coordinator = MainCoordinator(goToStock: self.goToStock)
+        let coordinator = MainCoordinator(goToStock: self.goToStock,
+                                          stockManager: self.stocksManager)
         coordinator.start()
         childCoordinators[FlowName.main.rawValue] = coordinator
         
@@ -178,7 +182,8 @@ final class AppCoordinator: Coordinator {
     
     /// Start Stock flow (UIKit)
     private func startStocksFlow() {
-        let coordinator = StocksCoordinator(goToHome: self.goToHomeFromStock)
+        let coordinator = StocksCoordinator(goToHome: self.goToHomeFromStock,
+                                            stocksManager: self.stocksManager)
         coordinator.start()
         childCoordinators[FlowName.stock.rawValue] = coordinator
         

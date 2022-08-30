@@ -15,18 +15,21 @@ final class StocksCoordinator: NSObject, Coordinator {
     // MARK: - Private
     private let goToHome: CurrentValueSubject<Bool,Never>
     
-    // MARK: _ init
-    init(goToHome: CurrentValueSubject<Bool,Never>) {
-        self.goToHome = goToHome
-    }
-    
     /// 'StocksManager'
-    private let stocksManager = StocksManager()
+    private let stocksManager: StocksManagerProtocol
     
     /// ViewModels
     private lazy var stocksListViewModel = StocksListViewModel(manager: stocksManager)
     
     private lazy var stocksSearchViewModel = StocksSearchViewModel(manager: stocksManager)
+    
+    // MARK: _ init
+    init(goToHome: CurrentValueSubject<Bool,Never>,
+         stocksManager: StocksManagerProtocol
+    ) {
+        self.goToHome = goToHome
+        self.stocksManager = stocksManager
+    }
     
     /// Watch list view to show the list of 'Stocks'
     private lazy var watchListViewController: WatchListViewController = {

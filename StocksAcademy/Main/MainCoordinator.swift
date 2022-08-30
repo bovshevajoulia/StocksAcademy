@@ -14,20 +14,22 @@ final class MainCoordinator: Coordinator {
     // MARK: - Private
     private let goToStock: CurrentValueSubject<Bool,Never>
     
-    private let stockManager = StocksManager()
+    private let stocksManager: StocksManagerProtocol
     
     private lazy var homeViewModel = AcademyViewModel(manager: StocksAcademyManager())
-    private lazy var stocksViewModel = StocksViewModel(manager: stockManager)
-    private lazy var stocksNewsViewModel = MarketNewsViewModel(manager: stockManager)
+    private lazy var stocksViewModel = StocksViewModel(manager: stocksManager)
+    private lazy var stocksNewsViewModel = MarketNewsViewModel(manager: stocksManager)
     
     private let stateManager = StateManager()
     
     /// Set of an 'AnyCancellable' to store all subscriptions
     private var subscriptions = Set<AnyCancellable>()
     
-    init(goToStock: CurrentValueSubject<Bool,Never>) {
+    init(goToStock: CurrentValueSubject<Bool,Never>,
+         stockManager: StocksManagerProtocol
+    ) {
         self.goToStock = goToStock
-        
+        self.stocksManager = stockManager
         self.setupSubscriptions()
     }
     
